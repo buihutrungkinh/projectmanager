@@ -27,7 +27,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./nginx-config:/etc/nginx/conf.d
-      - .:/var/www/html
+      - ./nginx-config/default:/etc/nginx/conf.d
+      - ./:/var/www/html
     depends_on:
       - php
