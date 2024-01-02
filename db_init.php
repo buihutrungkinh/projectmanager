@@ -1,16 +1,5 @@
 <?php
-$servername = "your_mysql_servername";
-$username = "your_mysql_username";
-$password = "your_mysql_password";
-$dbname = "project_management";
-
-$conn = new mysqli($servername, $username, $password);
-
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include 'config.php';
 // Tạo cơ sở dữ liệu nếu chưa tồn tại
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 $conn->query($sql);
