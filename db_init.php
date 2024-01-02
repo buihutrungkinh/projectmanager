@@ -1,5 +1,16 @@
 <?php
-include 'config.php';
+
+$servername = "db";
+$username = "root";
+$password = "123456";
+$dbname = "project_management";
+
+$conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Tạo cơ sở dữ liệu nếu chưa tồn tại
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 $conn->query($sql);
