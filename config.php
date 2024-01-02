@@ -1,7 +1,7 @@
 <?php
-$servername = "your_mysql_servername";
-$username = "your_mysql_username";
-$password = "your_mysql_password";
+$servername = "db";
+$username = "root";
+$password = "123456";
 $dbname = "project_management";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
