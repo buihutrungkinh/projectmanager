@@ -31,3 +31,5 @@ services:
       - ./:/var/www/html
     depends_on:
       - php
+  command: ["./wait-for-it.sh", "php:9000", "--", "nginx", "-g", "daemon off;"]
+
